@@ -21,7 +21,7 @@ const CreatePrompt = () => {
         setSubmitting(true);
         console.log(JSON.stringify({
             prompt: post.prompt,
-            useId: session?.user.id,
+            userId: session?.user.id,
             tag: post.tag
         }));
         try {
@@ -29,7 +29,7 @@ const CreatePrompt = () => {
                 method: 'POST',
                 body: JSON.stringify({
                     prompt: post.prompt,
-                    useId: session?.user.id,
+                    userId: session?.user.id,
                     tag: post.tag
                 })
             });
